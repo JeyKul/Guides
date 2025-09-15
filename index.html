@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Markdown Web Interpreter</title>
+  <meta name="description" content="Markdown site renderer for GitHub Pages" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+</head>
+<body>
+  <div class="frame">
+    <header>
+      <div class="brand">
+        <div class="logo">MD</div>
+        <div>
+          <div style="font-weight:700">Markdown Web Interpreter</div>
+          <div class="muted">Multi-page markdown viewer</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="themeToggle">Toggle Light/Dark</button>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <main>
+        <div id="content" aria-live="polite">Loading...</div>
+      </main>
+      <aside id="guide"></aside>
+    </div>
+
+    <footer>
+      Use <code>?page=name</code> to load <code>/pages/name.md</code>. Links in markdown open in new tabs.
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
